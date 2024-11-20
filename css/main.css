@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     border: none;
     margin: 0;
@@ -6,12 +9,14 @@
   body {
     background-color: black;
     font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
   }
   main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background-image: url(../images/background.jpg); 
+    height: 80vh;
   }
   header > h1, footer > h2 {
     text-align: center;
@@ -46,6 +51,7 @@
     text-transform: uppercase;
   }
 
+  /* To do styling */
 .todo_list li:nth-child(odd) {
   background-color: rgba(179, 179, 179, 0.2);
 }
@@ -57,6 +63,7 @@
   background-color: rgb(245, 250, 179);
 }
 
+/* In Progress styling */
 .inprogress_list {
   color: grey;
 }
@@ -83,7 +90,12 @@
 .inprogress-lists span {
   margin: auto;
 }
+.progressing input[type="checkbox"]:checked + span::after {
+    content: "\1F504";
+    margin-left: 5px;
+}
 
+/* Done styling */
 .done_list li:nth-child(odd) {
   background-color: rgba(231, 186, 218);
 }
@@ -149,4 +161,9 @@
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+/* Footer */
+.decorated-heading::after {
+    content: "\1F381";
 }
