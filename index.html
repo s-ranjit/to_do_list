@@ -12,9 +12,9 @@
         <h1>To-Do List for My Birthday Party!!</h1>
     </header>
     <main>
-        <article>
+        <article id="todo">
             <h2>To Do...</h2>
-            <ul>
+            <ul class="todo_list">
                 <li>1.Decide a birthday theme</li>
                 <li>2.Make guests list</li>
                 <li>3.Design invitation card</li>
@@ -23,49 +23,63 @@
             </ul>
         </article>
 
-        <article>
+        <article id="inprogress">
             <h2>In Progress...</h2>
-            <ul>
+            <ul class="inprogress_list">
                 <li>
-                    <div><input type="checkbox"><span></span>Selected Decorations to Setup </div>
-                </li>
-                <li>
-                    <div><input type="checkbox"><span></span>Waiting for Desserts Confirmation
+                    <div class="progressing inprogress-lists"><input type="checkbox"><span></span>
+                        <p>Selected Decorations to Setup</p>
                     </div>
                 </li>
                 <li>
-                    <div><input type="checkbox"><span></span>Organize Seating and Table
-                        Arrangements </div>
+                    <div class="progressing inprogress-lists"><input type="checkbox"><span></span>
+                        <p>Waiting for Desserts
+                            Confirmation</p>
+                    </div>
                 </li>
                 <li>
-                    <div><input type="checkbox"><span></span>Ordered Cute Dress for Myself</div>
+                    <div class="progressing inprogress-lists"><input type="checkbox"><span></span>
+                        <p>Organize Seating and Table Arrangements</p>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="progressing inprogress-lists"><input type="checkbox"><span></span>
+                        <p>Ordered Cute Dress for
+                            Myself</p>
+                    </div>
                 </li>
             </ul>
         </article>
-        <article>
+
+        <article id="done">
             <h2>Done!!</h2>
-            <ul>
+            <ul class="done_list">
                 <li>
-                    <input type="checkbox">
-                    <label>Confirm date and time</label>
+
+                    <input type="checkbox" checked id="done-item1">
+                    <label for="done-item1">Confirm date and time</label>
+
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label>Booked a place for a party</label>
+                    <input type="checkbox" checked id="done-item2">
+                    <label for="done-item2">Booked a place for a party</label>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label>Plan games and activities</label>
+                    <input type="checkbox" checked id="done-item3">
+                    <label for="done-item3">Plan games and activities</label>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label>Ordered my favourite cake</label>
+                    <input type="checkbox" checked id="done-item4">
+                    <label for="done-item4">Ordered my favourite cake</label>
                 </li>
             </ul>
+
         </article>
     </main>
+
     <footer>
-        <h2> Don't Forget to Bring me GIFTS.</h2>
+        <h2 class="decorated-heading"> Don't Forget to Bring me GIFTS.</h2>
     </footer>
 </body>
 
