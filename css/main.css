@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: black;
+    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(../images/background.jpg); 
+    height: 80vh;
+  }
+  header > h1, footer > h2 {
+    text-align: center;
+    padding: 20px;
+    color: black;
+    background-color: rgb(196, 196, 196);
+  }
+  article {
+    width: 320px;
+    height: 400px;
+    border: 2px;
+    border-radius: 6px;
+    margin: 70px 30px;
+    text-align: left;
+    box-shadow: 2px 2px 2px 2px rgb(158, 158, 158);
+  }
+  article > h2 {
+    color: rgb(0, 0, 0);
+    padding: 4px 8px;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 25px;
+  }
+  ul li {
+    padding: 6px 8px;
+    font-size: 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
+  /* To do styling */
+.todo_list li:nth-child(odd) {
+  background-color: rgba(179, 179, 179, 0.2);
+}
+.todo_list {
+  color: grey;
+}
+
+#todo {
+  background-color: rgb(245, 250, 179);
+}
+
+/* In Progress styling */
+.inprogress_list {
+  color: grey;
+}
+.inprogress-lists p {
+  width: 265px;
+  margin-left: 5px;
+}
+#inprogress {
+  background-color: rgb(193, 238, 252);
+}
+.inprogress_list li:nth-child(odd) {
+  background-color: rgb(148, 226, 248);
+}
+.inprogress-lists input[type="checkbox"] {
+  width: 20px;
+  height: 20px; 
+  margin: 5px;
+  background-color: black;
+  margin: auto;
+}
+.inprogress-lists {
+  display: flex;
+}
+.inprogress-lists span {
+  margin: auto;
+}
+.progressing input[type="checkbox"]:checked + span::after {
+    content: "\1F504";
+    margin-left: 5px;
+}
+
+/* Done styling */
+.done_list li:nth-child(odd) {
+  background-color: rgba(231, 186, 218);
+}
+
+.done_list {
+  color: grey;
+}
+.done_list li {
+  color: grey;
+}
+
+#done {
+  background-color: rgb(232, 214, 227);
+}
+
+/* Custom Checkbox Styles for Done List */
+.done_list li {
+  margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.done_list input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.done_list label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.done_list label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checkbox checked state for done list - turns pink */
+.done_list input[type="checkbox"]:checked + label::before {
+  background-color: pink; /* Change to pink when checked */
+  border-color: pink; /* Border color also turns pink */
+}
+
+/* Add checkmark */
+.done_list input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Footer */
+.decorated-heading::after {
+    content: "\1F381";
+}
