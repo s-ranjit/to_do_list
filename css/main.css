@@ -67,32 +67,18 @@
 .inprogress_list {
   color: grey;
 }
-.inprogress-lists p {
-  width: 265px;
-  margin-left: 5px;
-}
 #inprogress {
   background-color: rgb(193, 238, 252);
 }
 .inprogress_list li:nth-child(odd) {
   background-color: rgb(148, 226, 248);
 }
-.inprogress-lists input[type="checkbox"] {
-  width: 20px;
-  height: 20px; 
-  margin: 5px;
-  background-color: black;
-  margin: auto;
-}
-.inprogress-lists {
-  display: flex;
-}
-.inprogress-lists span {
-  margin: auto;
-}
-.progressing input[type="checkbox"]:checked + span::after {
+.inprogress_list input[type="checkbox"]:checked + span::after {
     content: "\1F504";
     margin-left: 5px;
+}
+.inprogress_list li:has(input[type="checkbox"]:checked) {
+  background-color: #8cd9be;
 }
 
 /* Done styling */
@@ -103,64 +89,20 @@
 .done_list {
   color: grey;
 }
-.done_list li {
-  color: grey;
-}
-
 #done {
-  background-color: rgb(232, 214, 227);
+  background-color: rgb(248, 224, 246);
 }
-
-/* Custom Checkbox Styles for Done List */
-.done_list li {
-  margin-bottom: 10px;
-  list-style: none;
-  display: flex;
-  align-items: center;
+.done_list li:nth-child(odd) {
+  background-color: #f4dada;
 }
-
-.done_list input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+input[type="checkbox"]:checked + span::after {
+  content: "\2764";
+  color: red;
+  margin-left: 5px;
 }
+.done_list li:has(input[type="checkbox"]:checked) {
 
-.done_list label {
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-}
-
-.done_list label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #fff; 
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-/* Checkbox checked state for done list - turns pink */
-.done_list input[type="checkbox"]:checked + label::before {
-  background-color: pink; /* Change to pink when checked */
-  border-color: pink; /* Border color also turns pink */
-}
-
-/* Add checkmark */
-.done_list input[type="checkbox"]:checked + label::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 3px;
-  width: 6px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  background-color: rgb(250, 185, 254);
 }
 
 /* Footer */
